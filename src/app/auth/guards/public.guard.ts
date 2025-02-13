@@ -24,10 +24,10 @@ const checkAuthStatus= (): Observable<boolean> => {
    .pipe(
     tap(isAuthenticated => {
       if(!isAuthenticated) {
-        setTimeout(()=> router.navigate(['/']), 0)
+        setTimeout(()=> router.navigate(['./']), 0)
       }
     }),
-    map(isAuthenticated => isAuthenticated)
+    map(isAuthenticated => !isAuthenticated)
    )
 }
 
