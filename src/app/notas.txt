@@ -1,0 +1,12 @@
+1. ¡¡¡OJO!!! HAY QUE EMPEZAR EN EL BACKEND CON EL COMANDO NPM RUN BACKEND, después ir a postman y luego ahí sí se ejecuta el ng s -o. Eso es para que el navegador no tenga problemas.
+
+
+2. Voy arriba a la barra de búsqueda, y coloco el comando >paste json as code, después de copiar el dato de postman.
+
+3. a-serviceHttpClient, para hacer el servicio con el httpClient, e importarlo en el appModule, en los imports.
+
+4. En el component de card, en el mat-chip-listbox, le agregué el ngSkipHydration>, para que no salga el error en la consola.
+
+5. ng g co heroes/components/confirmDialog --inline-style --skip-tests
+
+6. Vamos a entrar a los Guards o prote
