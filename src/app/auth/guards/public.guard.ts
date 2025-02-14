@@ -22,13 +22,14 @@ const checkAuthStatus= (): Observable<boolean> => {
 
    return authService.checkAuthentication()
    .pipe(
+    tap(isAuthenticated => console.log('Authenticated:', isAuthenticated)),
     tap(isAuthenticated => {
-      if(!isAuthenticated) {
-        setTimeout(()=> router.navigate(['./']), 0)
+      if(isAuthenticated) {
+        router.navigate(['./'])
       }
     }),
     map(isAuthenticated => !isAuthenticated)
-   )
+  )
 }
 
 export const canActivatedGuardLogin: CanActivateFn = (
